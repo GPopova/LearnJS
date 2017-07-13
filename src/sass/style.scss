@@ -1,0 +1,308 @@
+header{
+  //background-color: #4ccfc1;
+  //box-shadow: 0 1px 3px rgba(0,0,0,.08);
+  background-image: url("../img/header-sky.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+
+  .logo h1 {
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+
+    -webkit-animation-timing-function: ease;
+    -moz-animation-timing-function: ease;
+    -o-animation-timing-function: ease;
+    animation-timing-function: ease;
+  }
+  .logo:hover h1 {
+    -webkit-animation-name: tada;
+    -moz-animation-name: tada;
+    -o-animation-name: tada;
+    animation-name: tada;
+  }
+
+  @-webkit-keyframes tada {
+    0% {
+      -webkit-transform:scale(1)
+    }
+    10%, 20% {
+      -webkit-transform:scale(0.9) rotate(-3deg)
+    }
+    30%, 50%, 70%, 90% {
+      -webkit-transform:scale(1.1) rotate(3deg)
+    }
+    40%, 60%, 80% {
+      -webkit-transform:scale(1.1) rotate(-3deg)
+    }
+    100% {
+      -webkit-transform:scale(1) rotate(0)
+    }
+  }
+  @-moz-keyframes tada {
+    0% {
+      -moz-transform:scale(1)
+    }
+    10%,20% {
+      -moz-transform:scale(0.9) rotate(-3deg)
+    }
+    30%, 50%, 70%, 90% {
+      -moz-transform:scale(1.1) rotate(3deg)
+    }
+    40%, 60%, 80% {
+      -moz-transform:scale(1.1) rotate(-3deg)
+    }
+    100% {
+      -moz-transform:scale(1) rotate(0)
+    }
+  }
+  @-o-keyframes tada {
+    0% {
+      -o-transform:scale(1)
+    }
+    10%,20% {
+      -o-transform:scale(0.9) rotate(-3deg)
+    }
+    30%, 50%, 70%, 90% {
+      -o-transform:scale(1.1) rotate(3deg)
+    }
+    40%, 60%, 80% {
+      -o-transform:scale(1.1) rotate(-3deg)
+    }
+    100% {
+      -o-transform:scale(1) rotate(0)
+    }
+  }
+  @keyframes tada {
+    0% {
+      transform:scale(1)
+    }
+    10%, 20% {
+      transform:scale(0.9) rotate(-3deg)
+    }
+    30%, 50%, 70%, 90% {
+      transform:scale(1.1) rotate(3deg)
+    }
+    40%, 60%, 80% {
+      transform:scale(1.1) rotate(-3deg)
+    }
+    100% {
+      transform:scale(1) rotate(0)
+    }
+  }
+
+  .translate{
+    float: right;
+    margin: 20px -18px 16px 22px;
+  }
+  h1{
+    margin-top: -44px;
+    transition-property: background-color;
+    transition-duration: 3s;
+  }
+  .top-nav{
+      ul {
+        display: flex;
+        justify-content: center;
+        li {
+          text-transform: uppercase;
+          margin: -4px 30px;
+          a {
+            font-size: 21px;
+          }
+        }
+      }
+  }
+}
+.head-content {
+  background: $head-bg;
+  background:$head-content-grad;
+  padding: 10px;
+  border-top: 3px solid transparent;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  .beach {
+    .text-left{
+      text-align: center;
+      margin-top: 90px;
+      button{
+        margin: 40px 5px;
+        width: 120px;
+        height: 40px;
+        border: 3px solid transparent;
+        border-radius: 8px;
+        color: pink;
+        background: $button-gradient;
+        &:hover{
+          background: $button-gradient-hover;
+        }
+      }
+    }
+    .img-right{
+      img {
+        width: 490px;
+        height: 345px;
+        border: 3px solid transparent;
+        border-radius: 16px;
+      }
+    }
+  }
+}
+.content{
+  background: #fefcea;
+  background: $content-grad;
+  padding: 10px;
+  border-bottom: 3px solid transparent;
+  p{
+    text-align: left;
+    line-height: 28px;
+    margin-left: 60px;
+  }
+  .cloud{
+    background-image: url("../img/spritesheet.png");
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 66px;
+    background-position: -5px -5px;
+    position: absolute;
+    margin-left: -68px;
+    margin-top: 4px;
+  }
+}
+footer {
+  background-image: url("../img/footer.png");
+  background-size: cover;
+  .partners {
+    display: flex;
+    justify-content: center;
+    padding: 60px 10px;
+    li{
+      background-image: url("../img/spritesheet.png");
+      background-repeat: no-repeat;
+      margin:0 20px;
+      &:hover{
+        box-shadow: 2px 15px 20px #ffffff;
+      }
+    }
+    .sprite-1 {
+      width: 30px;
+      height: 30px;
+      background-position: -135px -5px;
+    }
+    .sprite-2 {
+      width: 30px;
+      height: 30px;
+      background-position: -175px -5px;
+    }
+    .sprite-3 {
+      width: 30px;
+      height: 30px;
+      background-position: -215px -5px;
+    }
+    .sprite-4 {
+      width: 30px;
+      height: 30px;
+      background-position: -255px -5px;
+    }
+    .sprite-5 {
+      width: 30px;
+      height: 30px;
+      background-position: -295px -5px;
+    }
+    .sprite-6 {
+      width: 30px;
+      height: 30px;
+      background-position: -335px -5px;
+    }
+  }
+}
+.owl-carousel {
+    position: relative;
+    margin: 30px 15px;
+    width: 100%;
+    .owl-dots {
+      display: inline-block;
+      position: absolute;
+      margin-top: 18px;
+      margin-left: 446px;
+      .owl-dot {
+        display: inline-block;
+        zoom: 1;
+        span {
+          border-radius: 50%;
+          background-color: $background-owl-span;
+          width: 11px;
+          height: 11px;
+          margin: -18px 4px;
+          display: block;
+          -webkit-backface-visibility: visible;
+          -webkit-transition: opacity 200ms ease;
+          -moz-transition: opacity 200ms ease;
+          -ms-transition: opacity 200ms ease;
+          -o-transition: opacity 200ms ease;
+          transition: opacity 200ms ease;
+          -webkit-border-radius: 30px;
+          -moz-border-radius: 30px;
+          //border-radius: 30px;
+          }
+        &.active span, &:hover span {
+          border-radius: 50%;
+          border: $border-owl-span;
+          background-color: pink;
+          width: 11px;
+          height: 11px;
+        }
+      }
+    }
+    .owl-nav {
+      display: block;
+      font-size: 0;
+      .owl-prev {
+        width: 22px;
+        height: 20px;
+        content: '';
+        background: url("../img/prev.png");
+        left: -28px;
+        top: 105px;
+        position: absolute;
+      }
+      .owl-next {
+        width: 22px;
+        height: 20px;
+        content: '';
+        background: url("../img/next.png") ;
+        right: -28px;
+        top: 105px;
+        position: absolute;
+      }
+    }
+  .one{
+    p{
+      display: flex;
+      justify-content: center;
+      margin-left: 0;
+      color:white;
+    }
+    img{
+      border: $border-owl-img;
+      border-radius: 10px;
+      height: 200px;
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
