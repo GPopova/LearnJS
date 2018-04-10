@@ -1,121 +1,129 @@
 
-// Owl Carousel
+"use strict";
+
+// Slider OwlCarousel
 
 $(document).ready(function(){
-    $(".slide-one").owlCarousel({
+    $(".slider").owlCarousel({
         loop:true,
         margin:10,
         responsiveClass:true,
+        navSpeed: 1000,
         responsive:{
             0:{
                 items:1,
                 nav:true
             },
             600:{
-                items:3,
-                nav:true
+                items:1,
+                nav:true,
             },
             992:{
-                items:3,
+                items:1,
                 nav:true,
                 loop:true
+                
             }
         }
     });
 });
 
-//
 
-// Translate
+// Tabs
 
-var arrLang = {
-    'ru' : {
-        'menu' : 'пункт',
-        'p top' : 'Таким образом, дальнейшее развитие различных форм деятельности обеспечивает актуальность форм воздействия.',
-        'button lorem': 'Кнопка',
-        'button ipsum': 'Кнопка',
-        'p text': 'Дорогие друзья',
-        'p content': 'Генератор псевдочитабельного текста (рыботекста) полезен дизайнерам и верстальщикам при наполнении макетов и тестовых сайтов. Данный приём позволяет без лишнего труда создать эффект заполненности сайта текстовым контентом.Текст рыба или Lorem Ipsum специально делают лишённым логического смысла, чтобы пользователь мог сосредаточиться на визуальном восприятии макета.',
-        'label name': 'Ваше имя',
-        'label comment': 'Ваш комментарий'
-    },
-    'en' : {
-        'menu' : 'item',
-        'p top' :'Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'button lorem': 'Button',
-        'button ipsum': 'Button',
-        'p text': 'Lorem ipsum',
-        'p content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        'label name': 'Your Name',
-        'label comment': 'Your comment'
+(function($) {
+    $(function() {
+
+        $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+            $(this)
+                .addClass('active').siblings().removeClass('active')
+                .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+        });
+
+    });
+})(jQuery);
+
+
+// validateForm
+
+var formLogin = document.forms.login;
+
+formLogin.onsubmit = function (e) {
+    e.preventDefault();
+    
+    resetError(this.elements.name.parentNode);
+    if (!validateName(this.elements.name.value, 2, 20)) {
+        showError(this.elements.name.parentNode, 'Enter your name');
+    }
+
+    resetError(this.elements.password.parentNode);
+    if(!validatePassword(this.elements.password.value, 6, 15)){
+        showError(this.elements.password.parentNode, 'Enter your password');
     }
 };
-$(function () {
-    $('.translate').click(function () {
-        var lang = $(this).attr('id');
 
-        $('.lang').each(function (index, element) {
-            $(this).text(arrLang[lang][$(this).attr('key')]);
-        })
-    })
-});
+var formSubscribe = document.forms.subscribe;
 
-//
-// Create Form
+formSubscribe.onsubmit = function (e) {
+    e.preventDefault();
 
-var $form = $('<form>',{ id: "form", method:"post"});
-var $lName = $('<label for="name" class="lang" key="label name">Your Name:</label>');
-var $name = $('<input>', { id: "name", type: "name", value: "" });
-var $lComment = $('<label for="comment" class="lang" key="label comment">Your comment:</label>');
-var $comment = $('<textarea>', { id: "comment", type: "text", row: 4, value: "" });
-var $submit = $('<input>', { type: "submit", value: "Send"});
-$form.append($lName);
-$form.append($name);
-$form.append($lComment);
-$form.append($comment);
-$form.append($submit);
-$('#container').html($form);
+    resetError(this.elements.email.parentNode);
+    if (!validateEmail(this.elements.email.value)) {
+        showError(this.elements.email.parentNode, ' Enter your email');
+    }
+};
 
-//
-
-// localStorage
-
-var elem = document.querySelectorAll('input, textarea');
-var elements = [];
-elements.push(elem[0], elem[1]);
-// console.log(elements);
+    function validateName(str, min, max) {
+        return (str.length >= min) && (str.length <= max) && (checkName(str));
+    }
+    function checkName(str) {
+        var wrongSymbols = '01234567890!?:;.';
+        for (var i = 0; i < str.length; i++) {
+            if (wrongSymbols.indexOf(str[i]) > -1) return false;
+        }
+        return true;
+    }
 
 
-for (i=0; i<elements.length; i++) {
-    (function(element) {
-        var id = element.getAttribute('id');
-        element.value = sessionStorage.getItem(id);
-        element.oninput = function() {
-            sessionStorage.setItem(id, element.value);
-        };
-    })(elements[i]);
-}
+    function validatePassword(str, min, max) {
+        return (str.length >= min) && (str.length <= max);
+    }
 
-//
 
-// validate Form
-// не работает
+    function validateEmail(str) {
+        return checkEmail(str);
+    }
+    function checkEmail(str) {
+        if (str.indexOf('@') < 1) return false;
+        if (str.indexOf('.') <= str.indexOf('@') + 2) return false;
+        if (str.indexOf('.') == str[str.length-1]) return false;
+        return true;
+    }
 
-/*form.onsubmit = function validate(form) {
-     e.preventDefault();
-     var reason = "";
-     if (form.elem[0].value == "" || /[^a-zA-z]/.test(form.elem[0].value))
-         reason += "Ошибка имени ";
-     if (form.elem[1].value == "" || /[^0-9]/.test(form.elem[1].value))
-         reason += "Ошибка заполнения ";
+// add errorMessage
+    function showError(container, errorMessage) {
+        container.className = 'error';
+        var msgElem = document.createElement('span');
+        msgElem.className = "error-message";
+        msgElem.innerHTML = errorMessage;
+        container.appendChild(msgElem);
+    }
 
-     if (reason == "")
-         return true;
-     else {
-         alert(reason);
-         return false;
-     }
- };
-*/
+// remove errorMessage
+    function resetError(container) {
+        container.className = '';
+        if (container.lastChild.className == "error-message") {
+            container.removeChild(container.lastChild);
+        }
+    }
 
-//
+
+
+// topMenu
+
+var menuElem = document.getElementById('topMenu');
+var titleElem = menuElem.querySelector('.title');
+
+titleElem.onclick = function() {
+    menuElem.classList.toggle('open');
+};

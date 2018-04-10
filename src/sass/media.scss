@@ -1,0 +1,539 @@
+@media (min-width: 768px) and (max-width: 991px){
+  header{
+    padding-left: 60px;
+    padding-top: 80px;
+    background-size: inherit;
+    .logo h1 {
+      font-size: 116px;
+    }
+
+    .top-nav{
+      ul {
+        li {
+          a {
+            font-size: 22px;
+            padding-right: 26px;
+          }
+        }
+      }
+    }
+    .menu{
+      display: none;
+    }
+    .owl-carousel {
+      .owl-item{
+        img{
+          width:82%;
+        }
+      }
+      .owl-nav {
+        .owl-prev{
+          left: -22px;
+        }
+        .owl-next{
+          right: 40px;
+        }
+      }
+
+      .slide-one{
+        margin-top: 20px;
+        .picture{
+          margin-left:40px;
+        }
+        .text{
+          margin-left: -20px;
+          margin-top: 36px;
+          h2{
+            padding-bottom: 14px;
+            font-size: 54px;
+          }
+          p{
+            font-size:36px;
+          }
+          button{
+            width: 136px;
+            height: 38px;
+            margin-top: 28px;
+            font-size: 21px;
+          }
+        }
+      }
+    }
+  }
+
+  .content{
+    padding-top: 120px;
+    .tabs{
+      min-width: 100%;
+      padding: 0 20px;
+      .tabs__content.active {
+        .ipad{
+          img{
+            width: 100%;
+          }
+        }
+        .tab-text h3{
+          font-size: 34px;
+        }
+      }
+      ul{
+        li{
+          width: 174px;
+          height: 232px;
+          font-size: 22px;
+          padding-top: 18px;
+          .websites{
+            font-size: 20px;
+          }
+          img{
+            width: 70%;
+          }
+        }
+      }
+    }
+    .advantage{
+      margin-top: 80px;
+      text-align: center;
+      .advantage-text{
+       text-align: left;
+        margin-top: 30px;
+      }
+    }
+  }
+  footer {
+    .footer-first{
+      form{
+        margin:70px auto;
+      }
+      .form-login{
+        .error-message{
+          top: 184px;
+        }
+      }
+      .form-subscribe{
+        .error-message{
+          top:112px;
+        }
+        form{
+          margin: 0 auto 70px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px){
+header{
+  background-size: inherit;
+  display: inherit;
+  padding-left: 10%;
+  .logo{
+    h1{
+      font-size: 76px;
+    }
+  }
+  .top-nav ul {
+    justify-content: inherit;
+    li a {
+      font-size: 20px;
+      padding-right: 28px;
+    }
+  }
+  .menu{
+    display: none;
+  }
+  .owl-carousel{
+    .slide-one{
+      .picture{
+          margin: 0;
+        img{
+          width:220px;
+        }
+      }
+      .text{
+        margin-left: 20px;
+        h2{
+          font-size: 30px;
+          padding-bottom: 20px;
+          letter-spacing: normal;
+        }
+        p{
+          font-size: 22px;
+        }
+        button{
+          width: 120px;
+          font-size: 18px;
+        }
+      }
+    }
+    .owl-nav{
+      display: none;
+    }
+    .owl-dots {
+      display: inline-block;
+      position: absolute;
+      margin-top: 36px;
+      margin-left: 200px;
+      .owl-dot {
+        display: inline-block;
+        zoom: 1;
+        span {
+          border-radius: 50%;
+          background-color: rgba(17,179,103,.42);
+          width: 11px;
+          height: 11px;
+          margin: -18px 4px;
+          display: block;
+          -webkit-backface-visibility: visible;
+          -webkit-transition: opacity 200ms ease;
+          -moz-transition: opacity 200ms ease;
+          -ms-transition: opacity 200ms ease;
+          -o-transition: opacity 200ms ease;
+          transition: opacity 200ms ease;
+          -webkit-border-radius: 50px;
+          -moz-border-radius: 50px;
+        }
+        &.active span, &:hover span {
+          border-radius: 50%;
+          border: 1px solid rgba(0,0,0,.4);
+          background-color: rgba(17,179,103,.36);
+          width: 11px;
+          height: 11px;
+        }
+      }
+    }
+  }
+}
+  .content{
+    padding-top: 70px;
+    .tabs{
+      min-width: 80%;
+      padding: 0 20px;
+      ul{
+        li{
+          width: 24%;
+          height: auto;
+          font-size: 15px;
+          padding: 24px 0;
+          .websites{
+            font-size: 18px;
+          }
+          img{
+            width: 70%;
+          }
+        }
+      }
+      .tabs__content.active {
+        padding-left: 30px;
+        padding-right: 30px;
+        .ipad{
+          img{
+            width: 100%;
+          }
+        }
+        .tab-text h3{
+          font-size: 24px;
+        }
+      }
+    }
+    .advantage{
+      margin: 80px 20px;
+      margin-bottom: 0;
+      text-align: center;
+      img{
+        width: 100%;
+      }
+      .advantage-text{
+        text-align: left;
+        margin: 30px 20px 0;
+      }
+      h3{
+        font-size: 28px;
+      }
+      p{
+        line-height: 30px;
+      }
+    }
+  }
+  footer {
+    .footer-first{
+      form{
+        margin:70px auto;
+        width: 450px;
+        h3{
+          font-size: 24px;
+        }
+      }
+      .form-login{
+        .error-message{
+          top: 114px;
+        }
+      }
+      .form-subscribe{
+        .error-message{
+          top:112px;
+        }
+        form{
+          margin: 0 auto 70px;
+        }
+      }
+    }
+    .footer-second{
+      h3{
+        font-size: 18px;
+      }
+      h1{
+        font-size: 76px;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 479px){
+
+  header{
+    background-size: inherit;
+    display: inherit;
+    padding-left: 10%;
+    height: inherit;
+    .logo{
+      text-align: center;
+      h1{
+        font-size: 76px;
+      }
+    }
+    .top-nav {
+      display: none;
+    }
+    .menu {
+      display: block;
+      margin-top: -34px;
+      ul {
+        margin: 0;
+        list-style: none;
+        display: none;
+        margin-top: 30px;
+        padding: 10px 16px;
+        border-radius: 3px;
+        background-color: rgba(22,19,22,0.9);
+        padding-right: 170px;
+        padding-bottom: 17px;
+        a{
+          color: #fff;
+          opacity: .68;
+          font-size: 18px;
+          line-height: 42px;
+          &:hover{
+            opacity: 1;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    .menu .title {
+      font-size: 22px;
+      cursor: pointer;
+    }
+    .menu.open ul {
+      display: block;
+      position: absolute;
+      z-index: 2;
+    }
+    i{
+      position: absolute;
+      margin-left: 10px;
+    }
+    .owl-carousel{
+      margin-top: 20px;
+      .slide-one{
+        div{
+          display: block;
+        }
+        .picture{
+          margin: 0;
+          img{
+            width:180px;
+            margin: 0 auto;
+          }
+        }
+        .text{
+          position: inherit;
+          margin-top: 20px;
+          margin-left: 0;
+          text-align: center;
+          h2{
+            font-size: 30px;
+            padding-bottom: 10px;
+            letter-spacing: normal;
+          }
+          p{
+            font-size: 22px;
+            margin-left: 20px;
+          }
+          button{
+            margin-top: 20px;
+            margin-bottom: 60px;
+            width: 120px;
+            font-size: 18px;
+          }
+        }
+      }
+      .owl-nav{
+        display: none;
+      }
+      .owl-dots {
+        display: inline-block;
+        position: absolute;
+        margin-top: -30px;
+        margin-left: 38%;
+        .owl-dot {
+          display: inline-block;
+          zoom: 1;
+          span {
+            border-radius: 50%;
+            background-color: rgba(17,179,103,.42);
+            width: 11px;
+            height: 11px;
+            margin: -18px 4px;
+            display: block;
+            -webkit-backface-visibility: visible;
+            -webkit-transition: opacity 200ms ease;
+            -moz-transition: opacity 200ms ease;
+            -ms-transition: opacity 200ms ease;
+            -o-transition: opacity 200ms ease;
+            transition: opacity 200ms ease;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+          }
+          &.active span, &:hover span {
+            border-radius: 50%;
+            border: 1px solid rgba(0,0,0,.4);
+            background-color: rgba(17,179,103,.36);
+            width: 11px;
+            height: 11px;
+          }
+        }
+      }
+    }
+  }
+  .content{
+    padding-top: 70px;
+    .tabs{
+      min-width: 80%;
+      padding: 0 20px;
+      .tabs__caption{
+        p{
+          display: none;
+        }
+        .image{
+          display: inline-block;
+        }
+      }
+      ul{
+        li{
+          width: 23%;
+          height: auto;
+          padding: 14px 0;
+          img{
+            width: 90%;
+          }
+        }
+      }
+      .tabs__content.active {
+       padding: 50px 10px;
+        height: 530px;
+        overflow: auto;
+        .ipad{
+          img{
+            width: 236px;
+            height: 132px;
+          }
+        }
+        .tab-text h3{
+          font-size: 24px;
+        }
+      }
+    }
+    .advantage{
+      margin: 80px 20px;
+      margin-bottom: 0;
+      text-align: center;
+      img{
+        height: 170px;
+        width: 256px;
+      }
+      .advantage-text{
+        text-align: left;
+        margin: 30px 20px 0;
+      }
+      h3{
+        font-size: 28px;
+      }
+      p{
+        line-height: 28px;
+        font-size: 15px;
+      }
+    }
+  }
+  footer {
+    .footer-first{
+      form{
+        margin:70px auto;
+        width: 288px;
+        height: 138px;
+        h3{
+          font-size: 22px;
+          margin-bottom: 14px;
+        }
+        button{
+          margin-top: 24px;
+          margin-left: 75px;
+          font-size: 15px;
+        }
+        .error-message{
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+      .form-login{
+        form{
+          input{
+            width: 124px;
+            height: 23px;
+            font-size: 14px;
+          }
+        }
+        .error-message{
+          top: 78px;
+          color: white;
+          margin-left: -122px;
+        }
+      }
+      .form-subscribe{
+        form{
+          margin: 0 auto 70px;
+          height: 160px;
+          input{
+            width: 252px;
+            height: 23px;
+            font-size: 14px;
+          }
+          .error-message{
+            top:100px;
+            color: white;
+            margin-left: -248px;
+          }
+        }
+      }
+    }
+    .footer-second{
+      padding-left: 40px;
+      h3{
+        font-size: 18px;
+      }
+      h1{
+        font-size: 76px;
+      }
+    }
+  }
+}

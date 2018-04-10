@@ -1,11 +1,31 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+$font: "../fonts";
 
 @font-face {
-  font-family: "Bebas Neue";
-  src: url('../fonts/BebasNeue Bold.ttf');
+  font-family: 'SegoeUILight';
+  src: url('#{$font}/SegoeUILight/SegoeUILight.eot');
+  src: url('#{$font}/SegoeUILight/SegoeUILight.eot?#iefix') format('embedded-opentype'),
+  url('#{$font}/SegoeUILight/SegoeUILight.woff') format('woff'),
+  url('#{$font}/SegoeUILight/SegoeUILight.ttf')  format('truetype');
+  //font-style: normal;
+  //font-weight: normal;
 }
 
 @font-face {
-  font-family: 'Lobster';
-  src: url('../fonts/lobster.ttf');
+  font-family: 'MrsEavesItalic';
+  src: url('#{$font}/MrsEavesItalic/MrsEavesItalic_Italic.ttf') format('tryetype');
+  //font-style: normal;
+  //font-weight: normal;
 }
+
+@font-face {
+  font-family: 'Univers';
+  src: url('#{$font}/Univers/Univers.ttf') format('tryetype');
+  //font-style: normal;
+  //font-weight: normal;
+}
+
+$SegoeUI:'SegoeUILight';
+$MrsEaves:'MrsEavesItalic';
+$Univers: 'Univers';
+$Arial: 'Arial', sans-serif;
